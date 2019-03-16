@@ -16,9 +16,26 @@
 		170066E3223D4A0A000BEF4D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170066E1223D4A0A000BEF4D /* WelcomeViewController.swift */; };
 		170066E8223D4A69000BEF4D /* WelcomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170066E7223D4A69000BEF4D /* WelcomeViewController.storyboard */; };
 		170066EE223D4C6D000BEF4D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170066ED223D4C6D000BEF4D /* Colors.swift */; };
+		170066F2223D898B000BEF4D /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170066F1223D898B000BEF4D /* PlayerModel.swift */; };
+		170066F6223D8DAC000BEF4D /* GameStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170066F5223D8DAC000BEF4D /* GameStateModel.swift */; };
+		170066FE223D9EF8000BEF4D /* Pods_AR_Сheckers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170066FD223D9EF8000BEF4D /* Pods_AR_Сheckers.framework */; };
+		17006700223D9EFD000BEF4D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170066FF223D9EFD000BEF4D /* RealmSwift.framework */; };
+		17006706223D9F17000BEF4D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17006705223D9F17000BEF4D /* Realm.framework */; };
+		1700670A223DA074000BEF4D /* CheckerPositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17006709223DA074000BEF4D /* CheckerPositionModel.swift */; };
+		1700670C223DA31C000BEF4D /* PlayerScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700670B223DA31C000BEF4D /* PlayerScoreModel.swift */; };
+		1700670E223DA490000BEF4D /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700670D223DA490000BEF4D /* SessionManager.swift */; };
+		17006710223DA5FD000BEF4D /* HostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700670F223DA5FD000BEF4D /* HostService.swift */; };
+		17006712223DA770000BEF4D /* BrowserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17006711223DA770000BEF4D /* BrowserService.swift */; };
+		17006714223DA7F7000BEF4D /* PeerToPeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17006713223DA7F7000BEF4D /* PeerToPeerService.swift */; };
+		17006716223DAA08000BEF4D /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17006715223DAA08000BEF4D /* Keys.swift */; };
+		1700671B223DABDB000BEF4D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700671A223DABDB000BEF4D /* Network.swift */; };
+		1700671E223DB02E000BEF4D /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700671D223DB02E000BEF4D /* RealmService.swift */; };
+		17006720223DB315000BEF4D /* DispatchQueueLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700671F223DB315000BEF4D /* DispatchQueueLabels.swift */; };
+		17006722223DB7DE000BEF4D /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17006721223DB7DE000BEF4D /* GameConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EA07734D38EAEEBB1499CFC /* Pods-AR-Сheckers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR-Сheckers.debug.xcconfig"; path = "Target Support Files/Pods-AR-Сheckers/Pods-AR-Сheckers.debug.xcconfig"; sourceTree = "<group>"; };
 		170066CA223D48D6000BEF4D /* AR-Сheckers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR-Сheckers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		170066CD223D48D6000BEF4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		170066CF223D48D6000BEF4D /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -30,6 +47,23 @@
 		170066E1223D4A0A000BEF4D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		170066E7223D4A69000BEF4D /* WelcomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeViewController.storyboard; sourceTree = "<group>"; };
 		170066ED223D4C6D000BEF4D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		170066F1223D898B000BEF4D /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		170066F5223D8DAC000BEF4D /* GameStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateModel.swift; sourceTree = "<group>"; };
+		170066FD223D9EF8000BEF4D /* Pods_AR_Сheckers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = "Pods_AR_Сheckers.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		170066FF223D9EFD000BEF4D /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17006705223D9F17000BEF4D /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17006709223DA074000BEF4D /* CheckerPositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerPositionModel.swift; sourceTree = "<group>"; };
+		1700670B223DA31C000BEF4D /* PlayerScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScoreModel.swift; sourceTree = "<group>"; };
+		1700670D223DA490000BEF4D /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		1700670F223DA5FD000BEF4D /* HostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostService.swift; sourceTree = "<group>"; };
+		17006711223DA770000BEF4D /* BrowserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserService.swift; sourceTree = "<group>"; };
+		17006713223DA7F7000BEF4D /* PeerToPeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerToPeerService.swift; sourceTree = "<group>"; };
+		17006715223DAA08000BEF4D /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		1700671A223DABDB000BEF4D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		1700671D223DB02E000BEF4D /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		1700671F223DB315000BEF4D /* DispatchQueueLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueLabels.swift; sourceTree = "<group>"; };
+		17006721223DB7DE000BEF4D /* GameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConstants.swift; sourceTree = "<group>"; };
+		CC21F4998EF89B12869469AD /* Pods-AR-Сheckers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR-Сheckers.release.xcconfig"; path = "Target Support Files/Pods-AR-Сheckers/Pods-AR-Сheckers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +71,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17006706223D9F17000BEF4D /* Realm.framework in Frameworks */,
+				17006700223D9EFD000BEF4D /* RealmSwift.framework in Frameworks */,
+				170066FE223D9EF8000BEF4D /* Pods_AR_Сheckers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08BD2ACFD3DB70FFC0FCD9EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EA07734D38EAEEBB1499CFC /* Pods-AR-Сheckers.debug.xcconfig */,
+				CC21F4998EF89B12869469AD /* Pods-AR-Сheckers.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		170066C1223D48D6000BEF4D = {
 			isa = PBXGroup;
 			children = (
 				170066CC223D48D6000BEF4D /* AR-Сheckers */,
 				170066CB223D48D6000BEF4D /* Products */,
+				08BD2ACFD3DB70FFC0FCD9EF /* Pods */,
+				39B89E44217F83C362C54AF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +110,7 @@
 		170066CC223D48D6000BEF4D /* AR-Сheckers */ = {
 			isa = PBXGroup;
 			children = (
+				1700671C223DAFFF000BEF4D /* Services */,
 				170066F0223D4D63000BEF4D /* App */,
 				170066E5223D4A15000BEF4D /* Controllers */,
 				170066EA223D4C4A000BEF4D /* Models */,
@@ -102,6 +151,8 @@
 		170066EA223D4C4A000BEF4D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				170066F4223D8D80000BEF4D /* RealmModels */,
+				170066F1223D898B000BEF4D /* PlayerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,7 +160,10 @@
 		170066EB223D4C4F000BEF4D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				170066D8223D48D9000BEF4D /* LaunchScreen.storyboard */,
+				1700670D223DA490000BEF4D /* SessionManager.swift */,
+				1700670F223DA5FD000BEF4D /* HostService.swift */,
+				17006711223DA770000BEF4D /* BrowserService.swift */,
+				17006713223DA7F7000BEF4D /* PeerToPeerService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -118,6 +172,10 @@
 			isa = PBXGroup;
 			children = (
 				170066ED223D4C6D000BEF4D /* Colors.swift */,
+				17006715223DAA08000BEF4D /* Keys.swift */,
+				1700671A223DABDB000BEF4D /* Network.swift */,
+				1700671F223DB315000BEF4D /* DispatchQueueLabels.swift */,
+				17006721223DB7DE000BEF4D /* GameConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -134,10 +192,39 @@
 		170066F0223D4D63000BEF4D /* App */ = {
 			isa = PBXGroup;
 			children = (
+				170066D8223D48D9000BEF4D /* LaunchScreen.storyboard */,
 				170066CD223D48D6000BEF4D /* AppDelegate.swift */,
 				170066DB223D48D9000BEF4D /* Info.plist */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		170066F4223D8D80000BEF4D /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				170066F5223D8DAC000BEF4D /* GameStateModel.swift */,
+				1700670B223DA31C000BEF4D /* PlayerScoreModel.swift */,
+				17006709223DA074000BEF4D /* CheckerPositionModel.swift */,
+			);
+			path = RealmModels;
+			sourceTree = "<group>";
+		};
+		1700671C223DAFFF000BEF4D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1700671D223DB02E000BEF4D /* RealmService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		39B89E44217F83C362C54AF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17006705223D9F17000BEF4D /* Realm.framework */,
+				170066FF223D9EFD000BEF4D /* RealmSwift.framework */,
+				170066FD223D9EF8000BEF4D /* Pods_AR_Сheckers.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 170066DE223D48D9000BEF4D /* Build configuration list for PBXNativeTarget "AR-Сheckers" */;
 			buildPhases = (
+				0E481E7D404887D5A49EB189 /* [CP] Check Pods Manifest.lock */,
 				170066C6223D48D6000BEF4D /* Sources */,
 				170066C7223D48D6000BEF4D /* Frameworks */,
 				170066C8223D48D6000BEF4D /* Resources */,
+				A55AC464EFF5E5FCA31C3290 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,15 +297,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E481E7D404887D5A49EB189 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AR-Сheckers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A55AC464EFF5E5FCA31C3290 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AR-Сheckers/Pods-AR-Сheckers-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AR-Сheckers/Pods-AR-Сheckers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		170066C6223D48D6000BEF4D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170066F2223D898B000BEF4D /* PlayerModel.swift in Sources */,
 				170066E3223D4A0A000BEF4D /* WelcomeViewController.swift in Sources */,
+				1700670E223DA490000BEF4D /* SessionManager.swift in Sources */,
+				17006712223DA770000BEF4D /* BrowserService.swift in Sources */,
+				1700671E223DB02E000BEF4D /* RealmService.swift in Sources */,
+				17006716223DAA08000BEF4D /* Keys.swift in Sources */,
+				1700671B223DABDB000BEF4D /* Network.swift in Sources */,
 				170066EE223D4C6D000BEF4D /* Colors.swift in Sources */,
+				17006722223DB7DE000BEF4D /* GameConstants.swift in Sources */,
 				170066D2223D48D6000BEF4D /* SceneViewController.swift in Sources */,
+				17006714223DA7F7000BEF4D /* PeerToPeerService.swift in Sources */,
+				17006710223DA5FD000BEF4D /* HostService.swift in Sources */,
 				170066CE223D48D6000BEF4D /* AppDelegate.swift in Sources */,
+				17006720223DB315000BEF4D /* DispatchQueueLabels.swift in Sources */,
+				1700670C223DA31C000BEF4D /* PlayerScoreModel.swift in Sources */,
+				170066F6223D8DAC000BEF4D /* GameStateModel.swift in Sources */,
+				1700670A223DA074000BEF4D /* CheckerPositionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -348,7 +499,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -360,16 +511,17 @@
 		};
 		170066DF223D48D9000BEF4D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EA07734D38EAEEBB1499CFC /* Pods-AR-Сheckers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TVJ5PR2Y3P;
-				INFOPLIST_FILE = "AR-Сheckers/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/AR-Сheckers/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "HarBros.AR--heckers";
+				PRODUCT_BUNDLE_IDENTIFIER = "HarBros.AR-Checkers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -378,16 +530,17 @@
 		};
 		170066E0223D48D9000BEF4D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC21F4998EF89B12869469AD /* Pods-AR-Сheckers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TVJ5PR2Y3P;
-				INFOPLIST_FILE = "AR-Сheckers/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/AR-Сheckers/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "HarBros.AR--heckers";
+				PRODUCT_BUNDLE_IDENTIFIER = "HarBros.AR-Checkers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
