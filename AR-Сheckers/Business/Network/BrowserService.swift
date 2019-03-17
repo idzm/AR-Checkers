@@ -8,9 +8,15 @@
 
 import MultipeerConnectivity
 
+protocol BrowserServiceDelegate: class {
+    func foundPeer(peer: MCPeerID)
+    func lostPeer(peer: MCPeerID)
+}
+
 final class BrowserService: PeerToPeerService {
     
-    private let serviceBrowser : MCNearbyServiceBrowser
+    private let serviceBrowser: MCNearbyServiceBrowser
+    weak var delegate: BrowserServiceDelegate?
     
     override init() {
         serviceBrowser = MCNearbyServiceBrowser(peer: NetworkConstants.peerID,
@@ -22,6 +28,11 @@ final class BrowserService: PeerToPeerService {
     
     deinit {
         self.serviceBrowser.stopBrowsingForPeers()
+    }
+    
+    func invitePeer(_ peer: MCPeerID) {
+        let session = SessionManager.shared.session
+        serviceBrowser.invitePeer(peer, to: session, withContext: nil, timeout: 10)
     }
 }
 

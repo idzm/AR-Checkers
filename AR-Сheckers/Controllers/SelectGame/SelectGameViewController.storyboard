@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Huu-dD-5Zj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Game View Controller-->
+        <scene sceneID="yPh-BE-IFl">
+            <objects>
+                <viewController id="Huu-dD-5Zj" customClass="SelectGameViewController" customModule="AR_Сheckers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xPd-g5-x7s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L9F-4F-ma9">
+                                <rect key="frame" x="37.5" y="100" width="300" height="400.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3W0-KQ-yDZ" customClass="TransparentGradientView" customModule="AR_Сheckers" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="100" width="300" height="400.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpZ-QN-CmN" customClass="ColoredButton" customModule="AR_Сheckers" customModuleProvider="target">
+                                <rect key="frame" x="94" y="500.5" width="187.5" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onJoinTap:" destination="Huu-dD-5Zj" eventType="touchUpInside" id="d04-cR-G5K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="L9F-4F-ma9" firstAttribute="width" secondItem="xPd-g5-x7s" secondAttribute="width" multiplier="0.8" id="3Ia-Za-bWk"/>
+                            <constraint firstItem="L9F-4F-ma9" firstAttribute="centerX" secondItem="824-Nd-Eiw" secondAttribute="centerX" id="9I9-ff-I4L"/>
+                            <constraint firstItem="3W0-KQ-yDZ" firstAttribute="top" secondItem="L9F-4F-ma9" secondAttribute="top" id="QRP-VB-NX9"/>
+                            <constraint firstItem="3W0-KQ-yDZ" firstAttribute="centerX" secondItem="L9F-4F-ma9" secondAttribute="centerX" id="WnM-Lq-Eba"/>
+                            <constraint firstItem="3W0-KQ-yDZ" firstAttribute="leading" secondItem="L9F-4F-ma9" secondAttribute="leading" id="crN-A5-EXW"/>
+                            <constraint firstItem="L9F-4F-ma9" firstAttribute="centerY" secondItem="xPd-g5-x7s" secondAttribute="centerY" multiplier="0.9" id="eZe-yl-cmi"/>
+                            <constraint firstItem="L9F-4F-ma9" firstAttribute="height" secondItem="xPd-g5-x7s" secondAttribute="height" multiplier="0.6" id="f1F-kh-gdQ"/>
+                            <constraint firstItem="3W0-KQ-yDZ" firstAttribute="centerY" secondItem="L9F-4F-ma9" secondAttribute="centerY" id="lBG-1F-sSj"/>
+                            <constraint firstItem="lpZ-QN-CmN" firstAttribute="width" secondItem="xPd-g5-x7s" secondAttribute="width" multiplier="0.5" id="olm-P9-A0s"/>
+                            <constraint firstItem="lpZ-QN-CmN" firstAttribute="centerX" secondItem="824-Nd-Eiw" secondAttribute="centerX" id="p44-h0-PTp"/>
+                            <constraint firstItem="lpZ-QN-CmN" firstAttribute="top" secondItem="L9F-4F-ma9" secondAttribute="bottom" id="rtP-tB-V09"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="824-Nd-Eiw"/>
+                    </view>
+                    <connections>
+                        <outlet property="gradientView" destination="3W0-KQ-yDZ" id="EAr-I2-XDX"/>
+                        <outlet property="joinButton" destination="lpZ-QN-CmN" id="Yqw-ho-4E9"/>
+                        <outlet property="tableView" destination="L9F-4F-ma9" id="3kl-hl-cmb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOH-hX-1pZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-177" y="-88"/>
+        </scene>
+    </scenes>
+</document>

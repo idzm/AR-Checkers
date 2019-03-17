@@ -9,7 +9,14 @@
 import Foundation
 import MultipeerConnectivity
 
+protocol SessionManagerDelegate {
+    func stateDidChanged(with state: MCSessionState)
+    func didReceiveData(_ data: NSData)
+}
+
 final class SessionManager: NSObject {
+    
+    static var shared = SessionManager()
     
     lazy var session: MCSession = {
         let session = MCSession(peer: NetworkConstants.peerID,

@@ -10,9 +10,47 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet private weak var welcomeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setup()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    //MARK: Utility Methods(private)
+    private func setup() {
+        self.view.backgroundColor = Colors.dirtWhite
+        
+        welcomeLabel.text = "Welcome to AR Checkers.\nPlease ENJOY!"
+        welcomeLabel.font = UIFont.AvenirNext.bold(size: 24).font
+        welcomeLabel.textColor = Colors.darkGrey
+        welcomeLabel.textAlignment = .center
+        welcomeLabel.numberOfLines = 0
+    }
+    
+    //MARK: - Actions
+    @IBAction func onSoloGameTap(_ sender: Any) {
+    }
+    
+    @IBAction func onJoinGameTap(_ sender: Any) {
+        navigationController?.pushViewController(RouterService.selectGame, animated: true)
+    }
+    
+    @IBAction func onHostGameTap(_ sender: Any) {
+    }
+    
+    @IBAction func onAboutTap(_ sender: Any) {
+    }
+}
+
+//MARK: - Router
+extension WelcomeViewController {
+    
 }
