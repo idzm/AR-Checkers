@@ -72,9 +72,9 @@ extension SelectGameViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellRID) as? AvailableGameTableViewCell
-        cell?.configure(with: "Game #\(indexPath.row)")
-        //TODO: implement array
-        cell?.isSelected = peers[indexPath.row].displayName == selectedUser?.displayName
+        let peer = peers[indexPath.row]
+        cell?.configure(with: peer.displayName)
+        cell?.isSelected = peer.displayName == selectedUser?.displayName
         return cell ?? UITableViewCell()
     }
 }
@@ -93,6 +93,7 @@ extension SelectGameViewController: UITableViewDelegate {
 extension SelectGameViewController: BrowserServiceDelegate {
     func foundPeer(peer: MCPeerID) {
         peers.append(peer)
+        tableView.reloadData()
     }
     
     func lostPeer(peer: MCPeerID) {
@@ -102,5 +103,6 @@ extension SelectGameViewController: BrowserServiceDelegate {
                 selectedUser = nil
             }
         }
+        tableView.reloadData()
     }
 }

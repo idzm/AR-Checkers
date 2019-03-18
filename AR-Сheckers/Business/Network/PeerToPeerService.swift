@@ -11,5 +11,5 @@ import MultipeerConnectivity
 
 class PeerToPeerService: NSObject {
     static let type = "AR-Checkers"
-    let myPeerId = MCPeerID(displayName: "Player")
+    let myPeerId = NetworkConstants.peerID
 }

@@ -17,32 +17,50 @@ protocol AdvertiserServiceDelegate: class {
 final class AdvertiserService: PeerToPeerService {
     
     private let serviceAdvertiser: MCNearbyServiceAdvertiser
-    weak var delegate: AdvertiserServiceDelegate?
+    weak var delegate: AdvertiserServiceDelegate? {
+        didSet {
+            serviceAdvertiser.startAdvertisingPeer()
+        }
+    }
     
     override init() {
         serviceAdvertiser = MCNearbyServiceAdvertiser(peer: NetworkConstants.peerID,
                                                       discoveryInfo: nil,
                                                       serviceType: AdvertiserService.type)
         super.init()
-        self.serviceAdvertiser.delegate = self
-        self.serviceAdvertiser.startAdvertisingPeer()
+        serviceAdvertiser.delegate = self
     }
     
     deinit {
-        self.serviceAdvertiser.stopAdvertisingPeer()
+        serviceAdvertiser.stopAdvertisingPeer()
     }
 }
 
 extension AdvertiserService: MCNearbyServiceAdvertiserDelegate {
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
-        NSLog("%@", "didNotStartAdvertisingPeer: \(error)")
+        print("didNotStartAdvertisingPeer: \(error)")
     }
     
-    func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
-        NSLog("%@", "didReceiveInvitationFromPeer \(peerID)")
+    func advertiser(_ advertiser: MCNearbyServiceAdvertiser,
+                    didReceiveInvitationFromPeer peerID: MCPeerID,
+                    withContext context: Data?,
+                    invitationHandler: @escaping (Bool, MCSession?) -> Void) {
+        print("%@", "didReceiveInvitationFromPeer \(peerID)")
         delegate?.didReceiveInvitation(host: peerID.displayName, handler: { isInvited in
             let session = SessionManager.shared.session
             invitationHandler(isInvited, session)
+            SessionManager.shared.delegate = self
         })
+    }
+}
+
+extension AdvertiserService: SessionManagerDelegate {
+    func stateDidChanged(with state: MCSessionState) {
+        
+    }
+    
+    func didReceiveData(_ data: Data) {
+        let str = String(data: data, encoding: .utf8)
+        print(str)
     }
 }
