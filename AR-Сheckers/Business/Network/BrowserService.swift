@@ -16,14 +16,17 @@ protocol BrowserServiceDelegate: class {
 final class HostService: PeerToPeerService {
     
     private let serviceBrowser: MCNearbyServiceBrowser
-    weak var delegate: BrowserServiceDelegate?
+    weak var delegate: BrowserServiceDelegate? {
+        didSet {
+            self.serviceBrowser.startBrowsingForPeers()
+        }
+    }
     
     override init() {
         serviceBrowser = MCNearbyServiceBrowser(peer: SessionManager.shared.session.myPeerID,
                                                 serviceType: HostService.type)
         super.init()
         self.serviceBrowser.delegate = self
-        self.serviceBrowser.startBrowsingForPeers()
     }
     
     deinit {
@@ -32,22 +35,22 @@ final class HostService: PeerToPeerService {
     
     func invitePeer(_ peer: MCPeerID) {
         let session = SessionManager.shared.session
-        serviceBrowser.invitePeer(peer, to: session, withContext: nil, timeout: 10)
+        serviceBrowser.invitePeer(peer, to: session, withContext: nil, timeout: 30)
     }
 }
 
 extension HostService: MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
-        NSLog("%@", "didNotStartBrowsingForPeers: \(error)")
+        print("--- %@", "didNotStartBrowsingForPeers: \(error)")
     }
     
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
-        NSLog("%@", "foundPeer: \(peerID)")
+        print("--- %@", "foundPeer: \(peerID)")
         delegate?.foundPeer(peer: peerID)
     }
     
     func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
-        NSLog("%@", "lostPeer: \(peerID)")
+        print("--- %@", "lostPeer: \(peerID)")
         delegate?.lostPeer(peer: peerID)
     }
 }
