@@ -13,14 +13,14 @@ protocol BrowserServiceDelegate: class {
     func lostPeer(peer: MCPeerID)
 }
 
-final class BrowserService: PeerToPeerService {
+final class HostService: PeerToPeerService {
     
     private let serviceBrowser: MCNearbyServiceBrowser
     weak var delegate: BrowserServiceDelegate?
     
     override init() {
         serviceBrowser = MCNearbyServiceBrowser(peer: NetworkConstants.peerID,
-                                                serviceType: BrowserService.type)
+                                                serviceType: HostService.type)
         super.init()
         self.serviceBrowser.delegate = self
         self.serviceBrowser.startBrowsingForPeers()
@@ -36,7 +36,7 @@ final class BrowserService: PeerToPeerService {
     }
 }
 
-extension BrowserService: MCNearbyServiceBrowserDelegate {
+extension HostService: MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
         NSLog("%@", "didNotStartBrowsingForPeers: \(error)")
     }

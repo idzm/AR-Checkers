@@ -8,14 +8,14 @@
 
 import MultipeerConnectivity
 
-final class HostService: PeerToPeerService {
+final class AdvertiserService: PeerToPeerService {
     
     private let serviceAdvertiser : MCNearbyServiceAdvertiser
     
     override init() {
         serviceAdvertiser = MCNearbyServiceAdvertiser(peer: NetworkConstants.peerID,
                                                       discoveryInfo: nil,
-                                                      serviceType: HostService.type)
+                                                      serviceType: AdvertiserService.type)
         super.init()
         self.serviceAdvertiser.delegate = self
         self.serviceAdvertiser.startAdvertisingPeer()
@@ -26,7 +26,7 @@ final class HostService: PeerToPeerService {
     }
 }
 
-extension HostService: MCNearbyServiceAdvertiserDelegate {
+extension AdvertiserService: MCNearbyServiceAdvertiserDelegate {
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
         NSLog("%@", "didNotStartAdvertisingPeer: \(error)")
     }

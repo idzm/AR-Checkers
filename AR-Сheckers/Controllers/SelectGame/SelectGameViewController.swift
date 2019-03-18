@@ -16,9 +16,9 @@ final class SelectGameViewController: UIViewController {
     @IBOutlet private weak var gradientView: TransparentGradientView!
     
     private let cellRID = "AvailableGameTableViewCellIdentifier"
-    private let browserService: BrowserService = BrowserService()
+    private let hostService: HostService = HostService()
     
-    private var hostPeers: [MCPeerID] = [] {
+    private var peers: [MCPeerID] = [] {
         willSet {
             //TODO: batchUpdate
             tableView.reloadData()
@@ -29,7 +29,7 @@ final class SelectGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        browserService.delegate = self
+        hostService.delegate = self
         setup()
     }
     
@@ -70,9 +70,9 @@ final class SelectGameViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func onJoinTap(_ sender: Any) {
-        let peer = hostPeers[tableView.indexPathForSelectedRow?.row ?? 0]
+        let peer = peers[tableView.indexPathForSelectedRow?.row ?? 0]
         
-        browserService.invitePeer(peer)
+        hostService.invitePeer(peer)
     }
 }
 
@@ -102,12 +102,12 @@ extension SelectGameViewController: UITableViewDelegate {
 
 extension SelectGameViewController: BrowserServiceDelegate {
     func foundPeer(peer: MCPeerID) {
-        hostPeers.append(peer)
+        peers.append(peer)
     }
     
     func lostPeer(peer: MCPeerID) {
-        if let index = hostPeers.firstIndex(of: peer) {
-        hostPeers.remove(at: index)
+        if let index = peers.firstIndex(of: peer) {
+        peers.remove(at: index)
         }
     }
 }
