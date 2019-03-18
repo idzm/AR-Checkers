@@ -20,7 +20,7 @@ final class AdvertiserService: PeerToPeerService {
     weak var delegate: AdvertiserServiceDelegate?
     
     override init() {
-        serviceAdvertiser = MCNearbyServiceAdvertiser(peer: NetworkConstants.peerID,
+        serviceAdvertiser = MCNearbyServiceAdvertiser(peer: SessionManager.shared.session.myPeerID,
                                                       discoveryInfo: nil,
                                                       serviceType: AdvertiserService.type)
         super.init()

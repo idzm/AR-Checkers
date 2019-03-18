@@ -19,7 +19,7 @@ final class HostService: PeerToPeerService {
     weak var delegate: BrowserServiceDelegate?
     
     override init() {
-        serviceBrowser = MCNearbyServiceBrowser(peer: NetworkConstants.peerID,
+        serviceBrowser = MCNearbyServiceBrowser(peer: SessionManager.shared.session.myPeerID,
                                                 serviceType: HostService.type)
         super.init()
         self.serviceBrowser.delegate = self
