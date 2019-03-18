@@ -31,6 +31,7 @@ final class WaitPlayerViewController: BaseViewController {
         let popUp = UIAlertController(title: "Invitation", message: message, preferredStyle: .alert)
         let accentAction = UIAlertAction(title: "Accept", style: .default) { action in
             self.invitationHandler?(true)
+            self.presentScene()
         }
         let cancelAction = UIAlertAction(title: "Deny", style: .cancel) { action in
             self.invitationHandler?(false)
@@ -39,6 +40,10 @@ final class WaitPlayerViewController: BaseViewController {
         popUp.addAction(accentAction)
         popUp.addAction(cancelAction)
         self.present(popUp, animated: true, completion: nil)
+    }
+    
+    private func presentScene() {
+        navigationController?.pushViewController(RouterService.scene, animated: true)
     }
 }
 

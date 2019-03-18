@@ -35,6 +35,7 @@ final class SelectGameViewController: BaseViewController {
     override func setup() {
         super.setup()
         
+        SessionManager.shared.delegates?.append(self)
         hostService.delegate = self
 
         joinButton.setTitle("Join Selected Game", for: .normal)
@@ -53,6 +54,10 @@ final class SelectGameViewController: BaseViewController {
         
         ///
         gradientView.configureView(colorType: .blueClearBlue, direction: .topDown)
+    }
+    
+    private func presentScene() {
+        navigationController?.pushViewController(RouterService.scene, animated: true)
     }
     
     //MARK: Actions
@@ -105,4 +110,18 @@ extension SelectGameViewController: BrowserServiceDelegate {
         }
         tableView.reloadData()
     }
+}
+
+extension SelectGameViewController: SessionManagerDelegate {
+    func stateDidChanged(with state: MCSessionState) {
+        if state == .connected {
+            presentScene()
+        }
+    }
+    
+    func didReceiveData(_ data: Data) {
+        
+    }
+    
+    
 }

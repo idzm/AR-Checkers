@@ -38,18 +38,17 @@ final class AdvertiserService: PeerToPeerService {
 
 extension AdvertiserService: MCNearbyServiceAdvertiserDelegate {
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
-        print("didNotStartAdvertisingPeer: \(error)")
+        debugPrint("Advertiser- didNotStartAdvertisingPeer: \(error)")
     }
     
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser,
                     didReceiveInvitationFromPeer peerID: MCPeerID,
                     withContext context: Data?,
                     invitationHandler: @escaping (Bool, MCSession?) -> Void) {
-        print("%@", "didReceiveInvitationFromPeer \(peerID)")
+        debugPrint("Advertiser- didReceiveInvitationFromPeer \(peerID)")
         delegate?.didReceiveInvitation(host: peerID.displayName, handler: { isInvited in
             let session = SessionManager.shared.session
             invitationHandler(isInvited, session)
-            SessionManager.shared.delegate = self
         })
     }
 }
@@ -60,7 +59,6 @@ extension AdvertiserService: SessionManagerDelegate {
     }
     
     func didReceiveData(_ data: Data) {
-        let str = String(data: data, encoding: .utf8)
-        print(str)
+        
     }
 }

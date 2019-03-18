@@ -41,16 +41,16 @@ final class HostService: PeerToPeerService {
 
 extension HostService: MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
-        print("--- %@", "didNotStartBrowsingForPeers: \(error)")
+        debugPrint("Browser- didNotStartBrowsingForPeers: \(error)")
     }
     
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
-        print("--- %@", "foundPeer: \(peerID)")
+        debugPrint("Browser- foundPeer: \(peerID)")
         delegate?.foundPeer(peer: peerID)
     }
     
     func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
-        print("--- %@", "lostPeer: \(peerID)")
+        debugPrint("Browser- lostPeer: \(peerID)")
         delegate?.lostPeer(peer: peerID)
     }
 }

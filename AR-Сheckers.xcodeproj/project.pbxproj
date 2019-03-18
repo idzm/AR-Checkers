@@ -24,7 +24,7 @@
 		1700670A223DA074000BEF4D /* CheckerPositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17006709223DA074000BEF4D /* CheckerPositionModel.swift */; };
 		1700670C223DA31C000BEF4D /* PlayerScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700670B223DA31C000BEF4D /* PlayerScoreModel.swift */; };
 		1700670E223DA490000BEF4D /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700670D223DA490000BEF4D /* SessionManager.swift */; };
-		17006710223DA5FD000BEF4D /* HostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700670F223DA5FD000BEF4D /* HostService.swift */; };
+		17006710223DA5FD000BEF4D /* AdvertiserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700670F223DA5FD000BEF4D /* AdvertiserService.swift */; };
 		17006712223DA770000BEF4D /* BrowserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17006711223DA770000BEF4D /* BrowserService.swift */; };
 		17006714223DA7F7000BEF4D /* PeerToPeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17006713223DA7F7000BEF4D /* PeerToPeerService.swift */; };
 		17006716223DAA08000BEF4D /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17006715223DAA08000BEF4D /* Keys.swift */; };
@@ -71,7 +71,7 @@
 		17006709223DA074000BEF4D /* CheckerPositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerPositionModel.swift; sourceTree = "<group>"; };
 		1700670B223DA31C000BEF4D /* PlayerScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScoreModel.swift; sourceTree = "<group>"; };
 		1700670D223DA490000BEF4D /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		1700670F223DA5FD000BEF4D /* HostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostService.swift; sourceTree = "<group>"; };
+		1700670F223DA5FD000BEF4D /* AdvertiserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertiserService.swift; sourceTree = "<group>"; };
 		17006711223DA770000BEF4D /* BrowserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserService.swift; sourceTree = "<group>"; };
 		17006713223DA7F7000BEF4D /* PeerToPeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerToPeerService.swift; sourceTree = "<group>"; };
 		17006715223DAA08000BEF4D /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				1700670D223DA490000BEF4D /* SessionManager.swift */,
-				1700670F223DA5FD000BEF4D /* HostService.swift */,
+				1700670F223DA5FD000BEF4D /* AdvertiserService.swift */,
 				17006711223DA770000BEF4D /* BrowserService.swift */,
 				17006713223DA7F7000BEF4D /* PeerToPeerService.swift */,
 			);
@@ -504,7 +504,7 @@
 				170066D2223D48D6000BEF4D /* SceneViewController.swift in Sources */,
 				17B80256223EE1A8008453A6 /* CustomNavigationController.swift in Sources */,
 				17006714223DA7F7000BEF4D /* PeerToPeerService.swift in Sources */,
-				17006710223DA5FD000BEF4D /* HostService.swift in Sources */,
+				17006710223DA5FD000BEF4D /* AdvertiserService.swift in Sources */,
 				170066CE223D48D6000BEF4D /* AppDelegate.swift in Sources */,
 				17006720223DB315000BEF4D /* DispatchQueueLabels.swift in Sources */,
 				17B80262223F980A008453A6 /* SettingsViewController.swift in Sources */,
