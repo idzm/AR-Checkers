@@ -13,8 +13,23 @@ final class RouterService {
         return UIStoryboard(name: name, bundle: nil)
     }
     
-    static var selectGame: UIViewController {
-        let controller = storyboard(name: "SelectGameViewController").instantiateInitialViewController()
+    static var selectOpponent: BaseViewController {
+        let controller = storyboard(name: String(describing: SelectGameViewController.self))
+            .instantiateInitialViewController()  as? BaseViewController
+        controller?.configureViewController(title: "Select opponent", isNeedNavBar: true)
+        return controller!
+    }
+    
+    static var wait: BaseViewController {
+        let controller = storyboard(name: String(describing: WaitPlayerViewController.self))
+            .instantiateInitialViewController() as? BaseViewController
+        controller?.configureViewController(title: "Waiting For Host", isNeedNavBar: true)
+        return controller!
+    }
+    
+    static var settings: BaseViewController {
+        let controller = SettingsViewController() as? BaseViewController
+        controller?.configureViewController(title: "Settings", isNeedNavBar: true)
         return controller!
     }
 }

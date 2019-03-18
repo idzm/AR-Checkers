@@ -8,9 +8,16 @@
 
 import MultipeerConnectivity
 
+typealias InvitationHandler = (Bool) -> ()
+
+protocol AdvertiserServiceDelegate: class {
+    func didReceiveInvitation(host: String, handler: @escaping InvitationHandler)
+}
+
 final class AdvertiserService: PeerToPeerService {
     
-    private let serviceAdvertiser : MCNearbyServiceAdvertiser
+    private let serviceAdvertiser: MCNearbyServiceAdvertiser
+    weak var delegate: AdvertiserServiceDelegate?
     
     override init() {
         serviceAdvertiser = MCNearbyServiceAdvertiser(peer: NetworkConstants.peerID,
@@ -33,5 +40,9 @@ extension AdvertiserService: MCNearbyServiceAdvertiserDelegate {
     
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
         NSLog("%@", "didReceiveInvitationFromPeer \(peerID)")
+        delegate?.didReceiveInvitation(host: peerID.displayName, handler: { isInvited in
+            let session = SessionManager.shared.session
+            invitationHandler(isInvited, session)
+        })
     }
 }

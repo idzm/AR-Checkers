@@ -9,7 +9,7 @@
 import UIKit
 import MultipeerConnectivity
 
-final class SelectGameViewController: UIViewController {
+final class SelectGameViewController: BaseViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var joinButton: ColoredButton!
@@ -18,6 +18,12 @@ final class SelectGameViewController: UIViewController {
     private let cellRID = "AvailableGameTableViewCellIdentifier"
     private let hostService: HostService = HostService()
     
+    private var selectedUser: MCPeerID? {
+        willSet {
+            joinButton.isEnabled = newValue != nil
+        }
+    }
+    
     private var peers: [MCPeerID] = [] {
         willSet {
             //TODO: batchUpdate
@@ -25,31 +31,12 @@ final class SelectGameViewController: UIViewController {
         }
     }
     
-    //MARK: Life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    //MARK: Utility Methods (private)
+    override func setup() {
+        super.setup()
         
         hostService.delegate = self
-        setup()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
-    //MARK: Utility Methods (private)
-    private func setup() {
-        self.view.backgroundColor = Colors.lightBlue
-        
-        let navTitleLabel = UILabel()
-        navTitleLabel.text = "Join Game"
-        navTitleLabel.font = UIFont.AvenirNext.medium(size: 24).font
-        navTitleLabel.textColor = Colors.dirtWhite
-        navTitleLabel.textAlignment = .center
-        navigationItem.titleView = navTitleLabel
-        
+
         joinButton.setTitle("Join Selected Game", for: .normal)
         joinButton.isEnabled = false
         
@@ -70,21 +57,24 @@ final class SelectGameViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func onJoinTap(_ sender: Any) {
-        let peer = peers[tableView.indexPathForSelectedRow?.row ?? 0]
-        
-        hostService.invitePeer(peer)
+        if let selectedUser = selectedUser {
+            hostService.invitePeer(selectedUser)
+        }
     }
 }
 
 //MARK: - UITableViewDataSource
 extension SelectGameViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return peers.count
+        //return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellRID) as? AvailableGameTableViewCell
         cell?.configure(with: "Game #\(indexPath.row)")
+        //TODO: implement array
+        cell?.isSelected = peers[indexPath.row].displayName == selectedUser?.displayName
         return cell ?? UITableViewCell()
     }
 }
@@ -92,11 +82,11 @@ extension SelectGameViewController: UITableViewDataSource {
 //MARK: - UITableViewDataSource
 extension SelectGameViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        joinButton.isEnabled = true
+        selectedUser = peers[indexPath.row]
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        joinButton.isEnabled = false
+        selectedUser = nil
     }
 }
 
@@ -107,7 +97,10 @@ extension SelectGameViewController: BrowserServiceDelegate {
     
     func lostPeer(peer: MCPeerID) {
         if let index = peers.firstIndex(of: peer) {
-        peers.remove(at: index)
+            peers.remove(at: index)
+            if selectedUser == peer {
+                selectedUser = nil
+            }
         }
     }
 }

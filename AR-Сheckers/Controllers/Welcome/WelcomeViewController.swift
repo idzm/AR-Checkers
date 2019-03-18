@@ -40,13 +40,18 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func onJoinGameTap(_ sender: Any) {
-        navigationController?.pushViewController(RouterService.selectGame, animated: true)
+        navigationController?.pushViewController(RouterService.wait, animated: true)
     }
     
     @IBAction func onHostGameTap(_ sender: Any) {
+        navigationController?.pushViewController(RouterService.selectOpponent, animated: true)
     }
     
     @IBAction func onAboutTap(_ sender: Any) {
+    }
+    
+    @IBAction func onSettingsTap(_ sender: Any) {
+        navigationController?.pushViewController(RouterService.settings, animated: true)
     }
 }
 

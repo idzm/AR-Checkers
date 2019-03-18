@@ -16,6 +16,10 @@ class CustomNavigationController: UINavigationController {
     
     private func setup() {
         navigationBar.tintColor = Colors.dirtWhite
-        navigationBar.barTintColor = Colors.dark        
+        navigationBar.barTintColor = Colors.dark
+    }
+    
+    override func setNavigationBarHidden(_ hidden: Bool, animated: Bool) {
+        super.setNavigationBarHidden(hidden, animated: animated)
     }
 }
