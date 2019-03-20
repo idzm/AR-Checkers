@@ -10,7 +10,6 @@
 		170066CE223D48D6000BEF4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170066CD223D48D6000BEF4D /* AppDelegate.swift */; };
 		170066D0223D48D6000BEF4D /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 170066CF223D48D6000BEF4D /* art.scnassets */; };
 		170066D2223D48D6000BEF4D /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170066D1223D48D6000BEF4D /* SceneViewController.swift */; };
-		170066D5223D48D6000BEF4D /* SceneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170066D3223D48D6000BEF4D /* SceneViewController.storyboard */; };
 		170066D7223D48D9000BEF4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170066D6223D48D9000BEF4D /* Assets.xcassets */; };
 		170066DA223D48D9000BEF4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170066D8223D48D9000BEF4D /* LaunchScreen.storyboard */; };
 		170066E3223D4A0A000BEF4D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170066E1223D4A0A000BEF4D /* WelcomeViewController.swift */; };
@@ -34,6 +33,12 @@
 		17006722223DB7DE000BEF4D /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17006721223DB7DE000BEF4D /* GameConstants.swift */; };
 		17006726223E5D61000BEF4D /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17006725223E5D61000BEF4D /* ColoredButton.swift */; };
 		1700672A223E5ECA000BEF4D /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17006729223E5ECA000BEF4D /* UIFont.swift */; };
+		1702E8C1224181880053005A /* CheckerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702E8C0224181880053005A /* CheckerModel.swift */; };
+		1702E8C32241829C0053005A /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702E8C22241829C0053005A /* Position.swift */; };
+		1702E8C5224184580053005A /* DeskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702E8C4224184580053005A /* DeskModel.swift */; };
+		1702E8C822418A960053005A /* CheckerActionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702E8C722418A960053005A /* CheckerActionModel.swift */; };
+		1702E8CA22418AB80053005A /* CheckerSelectedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702E8C922418AB80053005A /* CheckerSelectedModel.swift */; };
+		1705B96B224291A0007A2B53 /* SceneNameConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1705B96A224291A0007A2B53 /* SceneNameConstant.swift */; };
 		17B80245223E82DD008453A6 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B80244223E82DD008453A6 /* UIColor+Hex.swift */; };
 		17B80247223EB481008453A6 /* SelectGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B80246223EB481008453A6 /* SelectGameViewController.swift */; };
 		17B80249223EB497008453A6 /* SelectGameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B80248223EB497008453A6 /* SelectGameViewController.storyboard */; };
@@ -48,6 +53,11 @@
 		17B80262223F980A008453A6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B80261223F980A008453A6 /* SettingsViewController.swift */; };
 		17B80266223F9936008453A6 /* NicknameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B80264223F9936008453A6 /* NicknameTableViewCell.swift */; };
 		17B80267223F9936008453A6 /* NicknameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B80265223F9936008453A6 /* NicknameTableViewCell.xib */; };
+		17B8026922400C33008453A6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8026822400C33008453A6 /* AboutViewController.swift */; };
+		17B8026B22400C50008453A6 /* AboutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B8026A22400C50008453A6 /* AboutViewController.storyboard */; };
+		17B8026D22403673008453A6 /* InterestingFactsAboutCheckers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8026C22403673008453A6 /* InterestingFactsAboutCheckers.swift */; };
+		17B8026F22403B3F008453A6 /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8026E22403B3F008453A6 /* AnimatedLabel.swift */; };
+		17B8027122413B53008453A6 /* float4x4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8027022413B53008453A6 /* float4x4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +66,6 @@
 		170066CD223D48D6000BEF4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		170066CF223D48D6000BEF4D /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		170066D1223D48D6000BEF4D /* SceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
-		170066D4223D48D6000BEF4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SceneViewController.storyboard; sourceTree = "<group>"; };
 		170066D6223D48D9000BEF4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		170066D9223D48D9000BEF4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		170066DB223D48D9000BEF4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +90,12 @@
 		17006721223DB7DE000BEF4D /* GameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConstants.swift; sourceTree = "<group>"; };
 		17006725223E5D61000BEF4D /* ColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
 		17006729223E5ECA000BEF4D /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		1702E8C0224181880053005A /* CheckerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerModel.swift; sourceTree = "<group>"; };
+		1702E8C22241829C0053005A /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		1702E8C4224184580053005A /* DeskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskModel.swift; sourceTree = "<group>"; };
+		1702E8C722418A960053005A /* CheckerActionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerActionModel.swift; sourceTree = "<group>"; };
+		1702E8C922418AB80053005A /* CheckerSelectedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerSelectedModel.swift; sourceTree = "<group>"; };
+		1705B96A224291A0007A2B53 /* SceneNameConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneNameConstant.swift; sourceTree = "<group>"; };
 		17B80244223E82DD008453A6 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		17B80246223EB481008453A6 /* SelectGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGameViewController.swift; sourceTree = "<group>"; };
 		17B80248223EB497008453A6 /* SelectGameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectGameViewController.storyboard; sourceTree = "<group>"; };
@@ -95,6 +110,11 @@
 		17B80261223F980A008453A6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		17B80264223F9936008453A6 /* NicknameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameTableViewCell.swift; sourceTree = "<group>"; };
 		17B80265223F9936008453A6 /* NicknameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NicknameTableViewCell.xib; sourceTree = "<group>"; };
+		17B8026822400C33008453A6 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		17B8026A22400C50008453A6 /* AboutViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutViewController.storyboard; sourceTree = "<group>"; };
+		17B8026C22403673008453A6 /* InterestingFactsAboutCheckers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestingFactsAboutCheckers.swift; sourceTree = "<group>"; };
+		17B8026E22403B3F008453A6 /* AnimatedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLabel.swift; sourceTree = "<group>"; };
+		17B8027022413B53008453A6 /* float4x4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = float4x4.swift; sourceTree = "<group>"; };
 		CC21F4998EF89B12869469AD /* Pods-AR-Сheckers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR-Сheckers.release.xcconfig"; path = "Target Support Files/Pods-AR-Сheckers/Pods-AR-Сheckers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +208,9 @@
 			children = (
 				170066F4223D8D80000BEF4D /* RealmModels */,
 				170066F1223D898B000BEF4D /* PlayerModel.swift */,
+				1702E8C0224181880053005A /* CheckerModel.swift */,
+				1702E8C22241829C0053005A /* Position.swift */,
+				1702E8C4224184580053005A /* DeskModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +218,7 @@
 		170066EB223D4C4F000BEF4D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				1702E8C622418A5F0053005A /* NetworkModels */,
 				1700670D223DA490000BEF4D /* SessionManager.swift */,
 				1700670F223DA5FD000BEF4D /* AdvertiserService.swift */,
 				17006711223DA770000BEF4D /* BrowserService.swift */,
@@ -211,6 +235,8 @@
 				1700671A223DABDB000BEF4D /* Network.swift */,
 				1700671F223DB315000BEF4D /* DispatchQueueLabels.swift */,
 				17006721223DB7DE000BEF4D /* GameConstants.swift */,
+				17B8026C22403673008453A6 /* InterestingFactsAboutCheckers.swift */,
+				1705B96A224291A0007A2B53 /* SceneNameConstant.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -219,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				170066D1223D48D6000BEF4D /* SceneViewController.swift */,
-				170066D3223D48D6000BEF4D /* SceneViewController.storyboard */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -277,6 +302,7 @@
 			children = (
 				17006729223E5ECA000BEF4D /* UIFont.swift */,
 				17B80244223E82DD008453A6 /* UIColor+Hex.swift */,
+				17B8027022413B53008453A6 /* float4x4.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -288,13 +314,25 @@
 				17B80251223EC63B008453A6 /* TransparentGradientView.swift */,
 				17B80255223EE1A8008453A6 /* CustomNavigationController.swift */,
 				17B8025F223F8CFB008453A6 /* BaseViewController.swift */,
+				17B8026E22403B3F008453A6 /* AnimatedLabel.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		1702E8C622418A5F0053005A /* NetworkModels */ = {
+			isa = PBXGroup;
+			children = (
+				1702E8C722418A960053005A /* CheckerActionModel.swift */,
+				1702E8C922418AB80053005A /* CheckerSelectedModel.swift */,
+			);
+			path = NetworkModels;
 			sourceTree = "<group>";
 		};
 		17B80242223E822A008453A6 /* About */ = {
 			isa = PBXGroup;
 			children = (
+				17B8026822400C33008453A6 /* AboutViewController.swift */,
+				17B8026A22400C50008453A6 /* AboutViewController.storyboard */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -418,12 +456,12 @@
 				17B80267223F9936008453A6 /* NicknameTableViewCell.xib in Resources */,
 				17B80250223EBC5A008453A6 /* AvailableGameTableViewCell.xib in Resources */,
 				170066E8223D4A69000BEF4D /* WelcomeViewController.storyboard in Resources */,
+				17B8026B22400C50008453A6 /* AboutViewController.storyboard in Resources */,
 				170066D0223D48D6000BEF4D /* art.scnassets in Resources */,
 				17B8025D223EF3D7008453A6 /* WaitPlayerViewController.storyboard in Resources */,
 				170066DA223D48D9000BEF4D /* LaunchScreen.storyboard in Resources */,
 				17B80249223EB497008453A6 /* SelectGameViewController.storyboard in Resources */,
 				170066D7223D48D9000BEF4D /* Assets.xcassets in Resources */,
-				170066D5223D48D6000BEF4D /* SceneViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +528,7 @@
 				1700670E223DA490000BEF4D /* SessionManager.swift in Sources */,
 				17B80260223F8CFB008453A6 /* BaseViewController.swift in Sources */,
 				17006726223E5D61000BEF4D /* ColoredButton.swift in Sources */,
+				1702E8C822418A960053005A /* CheckerActionModel.swift in Sources */,
 				17006712223DA770000BEF4D /* BrowserService.swift in Sources */,
 				1700671E223DB02E000BEF4D /* RealmService.swift in Sources */,
 				17006716223DAA08000BEF4D /* Keys.swift in Sources */,
@@ -500,12 +539,21 @@
 				17B80245223E82DD008453A6 /* UIColor+Hex.swift in Sources */,
 				17006722223DB7DE000BEF4D /* GameConstants.swift in Sources */,
 				17B80252223EC63B008453A6 /* TransparentGradientView.swift in Sources */,
+				17B8026F22403B3F008453A6 /* AnimatedLabel.swift in Sources */,
+				1702E8C5224184580053005A /* DeskModel.swift in Sources */,
+				1702E8CA22418AB80053005A /* CheckerSelectedModel.swift in Sources */,
 				1700672A223E5ECA000BEF4D /* UIFont.swift in Sources */,
+				17B8026922400C33008453A6 /* AboutViewController.swift in Sources */,
+				17B8026D22403673008453A6 /* InterestingFactsAboutCheckers.swift in Sources */,
 				170066D2223D48D6000BEF4D /* SceneViewController.swift in Sources */,
 				17B80256223EE1A8008453A6 /* CustomNavigationController.swift in Sources */,
 				17006714223DA7F7000BEF4D /* PeerToPeerService.swift in Sources */,
+				17B8027122413B53008453A6 /* float4x4.swift in Sources */,
+				1702E8C1224181880053005A /* CheckerModel.swift in Sources */,
 				17006710223DA5FD000BEF4D /* AdvertiserService.swift in Sources */,
+				1705B96B224291A0007A2B53 /* SceneNameConstant.swift in Sources */,
 				170066CE223D48D6000BEF4D /* AppDelegate.swift in Sources */,
+				1702E8C32241829C0053005A /* Position.swift in Sources */,
 				17006720223DB315000BEF4D /* DispatchQueueLabels.swift in Sources */,
 				17B80262223F980A008453A6 /* SettingsViewController.swift in Sources */,
 				1700670C223DA31C000BEF4D /* PlayerScoreModel.swift in Sources */,
@@ -518,14 +566,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		170066D3223D48D6000BEF4D /* SceneViewController.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				170066D4223D48D6000BEF4D /* Base */,
-			);
-			name = SceneViewController.storyboard;
-			sourceTree = "<group>";
-		};
 		170066D8223D48D9000BEF4D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
