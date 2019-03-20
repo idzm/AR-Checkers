@@ -48,6 +48,7 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func onAboutTap(_ sender: Any) {
+        navigationController?.pushViewController(RouterService.about, animated: true)
     }
     
     @IBAction func onSettingsTap(_ sender: Any) {

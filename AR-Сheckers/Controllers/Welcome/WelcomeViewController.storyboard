@@ -33,13 +33,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUq-cv-zx7">
-                                <rect key="frame" x="166.5" y="230" width="42" height="20.5"/>
+                                <rect key="frame" x="166.5" y="198.5" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="McK-ib-HJm">
-                                <rect key="frame" x="159" y="246" width="57" height="264"/>
+                                <rect key="frame" x="159" y="235" width="57" height="264"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPp-aC-B5c" customClass="ColoredButton" customModule="AR_Сheckers" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="57" height="36"/>
@@ -82,10 +82,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="McK-ib-HJm" firstAttribute="top" secondItem="cUq-cv-zx7" secondAttribute="bottom" constant="16" id="4Ue-ab-vRN"/>
                             <constraint firstItem="cUq-cv-zx7" firstAttribute="centerX" secondItem="12A-hB-5lL" secondAttribute="centerX" id="4pr-6d-ZE0"/>
-                            <constraint firstItem="McK-ib-HJm" firstAttribute="centerY" secondItem="uqN-MA-bXy" secondAttribute="centerY" multiplier="1.1" constant="11.149999999999977" id="FUN-5V-jgR"/>
+                            <constraint firstItem="McK-ib-HJm" firstAttribute="centerY" secondItem="uqN-MA-bXy" secondAttribute="centerY" multiplier="1.1" id="FUN-5V-jgR"/>
                             <constraint firstItem="McK-ib-HJm" firstAttribute="centerX" secondItem="12A-hB-5lL" secondAttribute="centerX" id="NQJ-wF-JXD"/>
-                            <constraint firstItem="cUq-cv-zx7" firstAttribute="centerY" secondItem="uqN-MA-bXy" secondAttribute="centerY" multiplier="0.7" constant="6.8000000000000114" id="aF5-Gb-QYh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="12A-hB-5lL"/>
                     </view>
