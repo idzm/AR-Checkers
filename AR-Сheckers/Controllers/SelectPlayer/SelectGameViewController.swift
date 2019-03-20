@@ -122,6 +122,4 @@ extension SelectGameViewController: SessionManagerDelegate {
     func didReceiveData(_ data: Data) {
         
     }
-    
-    
 }

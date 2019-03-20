@@ -37,6 +37,10 @@ final class RouterService {
         let controller = storyboard(name: "SceneViewController")
             .instantiateInitialViewController() as? BaseViewController
         controller?.configureViewController(title: "AR-Checkers", isNeedNavBar: true)
+    static var about: BaseViewController {
+        let controller = storyboard(name: "AboutViewController")
+        .instantiateInitialViewController() as? BaseViewController
+        controller?.configureViewController(title: "About", isNeedNavBar: true)
         return controller!
     }
 }
