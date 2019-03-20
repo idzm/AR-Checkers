@@ -14,6 +14,11 @@ protocol SessionManagerDelegate: class {
     func didReceiveData(_ data: Data)
 }
 
+enum ResponseType: String {
+    case checkerDidChangeState  = "state"
+    case checkerDidMoved        = "moved"
+}
+
 final class SessionManager: NSObject {
     
     static var shared = SessionManager()
@@ -55,6 +60,8 @@ extension SessionManager: MCSessionDelegate {
         delegates?.forEach {
             $0.didReceiveData(data)
         }
+        
+        
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
