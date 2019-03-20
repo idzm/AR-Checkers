@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="width" secondItem="go1-Ew-WUf" secondAttribute="height" multiplier="1:1" id="XC0-um-R82"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sC-ns-B3j">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sC-ns-B3j" customClass="AnimatedLabel" customModule="AR_Сheckers" customModuleProvider="target">
                                 <rect key="frame" x="166.5" y="487.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -52,7 +52,7 @@
                         <viewLayoutGuide key="safeArea" id="BbC-H6-3dg"/>
                     </view>
                     <connections>
-                        <outlet property="adviceLabel" destination="2sC-ns-B3j" id="JCn-Qe-Wr1"/>
+                        <outlet property="adviceLabel" destination="2sC-ns-B3j" id="n2t-vP-V10"/>
                         <outlet property="imageView" destination="go1-Ew-WUf" id="Ayh-s3-WbK"/>
                         <outlet property="nicknameLabel" destination="HXI-pt-dSc" id="9me-g1-cUI"/>
                     </connections>

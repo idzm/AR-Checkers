@@ -10,7 +10,7 @@ import UIKit
 
 final class WaitPlayerViewController: BaseViewController {
     
-    @IBOutlet private weak var adviceLabel: UILabel!
+    @IBOutlet private weak var adviceLabel: AnimatedLabel!
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var nicknameLabel: UILabel!
     
@@ -24,6 +24,13 @@ final class WaitPlayerViewController: BaseViewController {
         
         nicknameLabel.text = String(format: "Your nickname is %@", NetworkConstants.peerID.displayName)
         nicknameLabel.numberOfLines = 0
+        
+        let images = GreatPlayers.allCases.map {  $0.image! }
+        let animatedImage = UIImage.animatedImage(with: images,
+                                                  duration: 10)
+        imageView.image = animatedImage
+        
+        adviceLabel.dataSource = InterestingFactsAboutCheckers.allFacts
     }
     
     private func showAcceptSessionPopUp(host: String) {
